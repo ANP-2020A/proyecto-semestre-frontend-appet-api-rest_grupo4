@@ -11,7 +11,8 @@ const ArticleList = ( props ) => {
 
     const { articles, isLoading, isError, mutate } = useArticleList();
     // const [ articles, setArticles ] = useState( props.articles );
-
+    //proyecto APPET
+    //plantilla a modificar
     // useEffect( () => {
     //   console.log( 'props.articles', props.articles );
     //   setArticles( props.articles );

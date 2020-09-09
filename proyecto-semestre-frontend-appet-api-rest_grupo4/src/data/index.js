@@ -37,7 +37,7 @@ const handleRequest = async( endpoint, method, params = null ) => {
   }
 
   requestData[ 'headers' ] = headers;
-  console.log( 'requestData', requestData );
+  console.log( 'requestData', requestData ); //preguntar
   const response = await fetch( `${ baseURL }${ endpoint }`, requestData );
   let jsonResponse = {};
 

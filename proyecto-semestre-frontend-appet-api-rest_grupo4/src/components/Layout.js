@@ -6,7 +6,7 @@ import Routes from '../constants/routes';
 import Navigation from './Navigation';
 import { Layout, Row, Col, Button, Popover } from 'antd';
 import { FacebookOutlined, InstagramOutlined, GithubOutlined, MailOutlined, WhatsAppOutlined } from '@ant-design/icons';
-import logo from '../images/logo-menta.png';
+import logo from '../images/logoappet.jpeg';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
@@ -93,7 +93,11 @@ const MainLayout = props => {
         <Footer className='footer'>
           <Row>
             <Col xs={ { span: 24 } } md={ 8 } className='logo-blanco'>
-              LOGO
+              <p><strong>Nosotros</strong></p>
+              <br />
+              Somos una empresa que se dedica a gestionar
+              servicios caninos pensando en el bienestar de
+              sus mascotas y sus dueños.
             </Col>
 
             <Col xs={ {
@@ -105,9 +109,9 @@ const MainLayout = props => {
                    offset: 3
                  } }
                  className='logo-menta'>
-              Elaborado por: <br />
+              <br />
               <a href='https://grupomenta.com' rel='noopener noreferrer' target='_blank'>
-                <img src={ logo } alt='Profe a Tiempo' height={ 50 } />
+                <img src={ logo } alt='Profe a Tiempo' height={ 75 } />
               </a>
             </Col>
 
@@ -121,13 +125,10 @@ const MainLayout = props => {
                  } }
                  className='contact-links'>
               <p><strong>Contáctanos</strong></p>
-              <p><MailOutlined /> <a href='mailto:chalo.salvador@grupomenta.com'>chalo.salvador@grupomenta.com</a></p>
+              <p><MailOutlined /> <a href='mailto:chalo.salvador@grupomenta.com'>appet@appet.com</a></p>
               <p><WhatsAppOutlined /> <a href='https://wa.me/593984794808' target='_blank' rel='noopener noreferrer'>+593
-                9-8479-4808</a></p>
-              <p><GithubOutlined /> <a href='https://github.com/chalosalvador'
-                                       target='_blank'
-                                       rel='noopener noreferrer'>@chalosalvador</a>
-              </p>
+                991234569</a></p>
+
             </Col>
           </Row>
 

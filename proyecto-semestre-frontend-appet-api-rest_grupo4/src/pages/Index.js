@@ -15,7 +15,7 @@ const HomePage = () => {
 
       <p>Este es el contenido de la página principal.</p>
 
-      <h2>Lista de Servicios</h2>
+      <h2>Lista de Servicios APPET</h2>
       <ServicesList />
     </>
   );

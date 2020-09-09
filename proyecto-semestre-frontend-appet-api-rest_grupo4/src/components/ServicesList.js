@@ -38,7 +38,7 @@ const ServicesList = ( props ) => {
           {
             services.map( ( service, i ) => (
              <li>
-                 {service.title}//campos q tengamos
+                 {service.title}
              </li>
             ) )
           }

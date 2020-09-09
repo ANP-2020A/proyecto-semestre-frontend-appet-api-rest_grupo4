@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import API from '../data/index';
 import { translateMessage } from '../utils/translateMessage';
 import ErrorList from './ErrorList';
-import { useArticleComments } from '../data/useArticleComments';
+//import { useArticleComments } from '../data/useArticleComments';
 import Routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 

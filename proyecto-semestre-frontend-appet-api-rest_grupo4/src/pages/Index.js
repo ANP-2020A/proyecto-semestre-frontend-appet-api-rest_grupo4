@@ -1,10 +1,10 @@
 import React from 'react';
-import ArticleList from '../components/ArticleList';
-import { useArticleList } from '../data/useArticleList';
-import ShowError from '../components/ShowError';
+//import ArticleList from '../components/ServicesList';
+//import { useArticleList } from '../data/useServicesList';
+//import ShowError from '../components/ShowError';
+import ServicesList from "../components/ServicesList";
 
 const HomePage = () => {
-  const articles = useArticleList();
 
   return (
     <>
@@ -15,14 +15,8 @@ const HomePage = () => {
 
       <p>Este es el contenido de la página principal.</p>
 
-      <h2>Lista de Artículos</h2>
-      {
-        articles.isLoading
-          ? 'Cargando...'
-          : articles.isError
-          ? <ShowError error={ articles.isError } />
-          : <ArticleList articles={ articles.articles } />
-      }
+      <h2>Lista de Servicios</h2>
+      <ServicesList />
     </>
   );
 };

@@ -15,7 +15,7 @@ body {
 }
 
 .header-wrapper {
-    background: #001529;
+    background: #F17525;
 }
 
 .ant-menu {
@@ -183,7 +183,7 @@ code {
         display: block;
         width: 20px;
         height: 2px;
-        background: #1890ff;
+        background: #F17525;
         position: relative;
     }
     .bars:after,.bars:before{
@@ -193,7 +193,7 @@ code {
         top: -6px;
         left: 0;
         height: 2px;
-        background: #1890ff;
+        background: #F17525;
     }
     .bars:after{
         top: auto;

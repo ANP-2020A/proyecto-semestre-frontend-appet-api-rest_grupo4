@@ -4,13 +4,13 @@
 import useSWR from 'swr';
 import API from './index';
 
-export const useArticleList = () => {
-  const { data, error, mutate } = useSWR( '/articles', API.fetcher );
+export const useServicesList = () => {
+  const { data, error, mutate } = useSWR( '/services', API.fetcher );
 
   return {
-    articles: data && data.data,
+    services: data && data.data,
     isLoading: !error && !data,
     isError: error,
     mutate
   };
-};
+};//consulta y list de los serv

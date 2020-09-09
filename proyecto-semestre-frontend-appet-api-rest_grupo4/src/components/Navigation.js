@@ -1,6 +1,4 @@
-/**
- * Created by chalosalvador on 2/7/20
- */
+
 import React, { useState } from 'react';
 
 import Routes from '../constants/routes';
@@ -55,15 +53,15 @@ const Navigation = ( props ) => {
         </Menu.Item>
 
         <Menu.Item key={ Routes.ARTICLES }>
-          <Link to={ Routes.ARTICLES } style={ linkStyle }>Articles</Link>
+          <Link to={ Routes.ARTICLES } style={ linkStyle }>Hospedaje</Link>
         </Menu.Item>
 
         <Menu.Item key={ Routes.PRIVATE }>
-          <Link to={ Routes.PRIVATE } style={ linkStyle }>Privada</Link>
+          <Link to={ Routes.PRIVATE } style={ linkStyle }>Peluquería</Link>
         </Menu.Item>
 
         <Menu.Item key={ Routes.ANTD }>
-          <Link to={ Routes.ANTD } style={ linkStyle }>ANTD</Link>
+          <Link to={ Routes.ANTD } style={ linkStyle }>Veterinaria</Link>
         </Menu.Item>
 
         <Menu.Item key={ Routes.ABOUT }>

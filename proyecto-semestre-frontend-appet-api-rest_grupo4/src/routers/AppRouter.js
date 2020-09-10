@@ -21,6 +21,7 @@ import Loading from '../components/Loading';
 const loadableOptions = { fallback: <Loading /> };
 
 const AsyncHome = loadable( () => import( '../pages/Index' ), loadableOptions );
+const AsyncHome2 = loadable( () => import( '../pages/Inicio' ), loadableOptions );
 const AsyncLogin = loadable( () => import( '../pages/Login' ), loadableOptions );
 const AsyncRegister = loadable( () => import( '../pages/Register' ), loadableOptions );
 const AsyncPrivate = loadable( () => import( '../pages/Private' ), loadableOptions );
@@ -44,6 +45,7 @@ const AsyncLogout = loadable( () => import( '../pages/Logout' ), loadableOptions
 const AppRouter = () => (
   <Switch>
     <PublicRoute exact path={ Routes.HOME } component={ AsyncHome } />
+      <PublicRoute exact path={ Routes.HOME2 } component={ AsyncHome2 } />
     <PublicRoute path={ Routes.LOGIN } component={ AsyncLogin } />
     <PublicRoute path={ Routes.REGISTER } component={ AsyncRegister } />
     <PublicRoute path={ Routes.SERVICES } component={ AsyncServices } />

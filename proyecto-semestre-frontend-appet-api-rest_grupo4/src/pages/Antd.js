@@ -14,8 +14,6 @@ const Option = Select.Option;
 
 const Antd = () => (
   <div style={ { marginTop: 100 } }>
-    <Order>
-    </Order>
     <Form layout='horizontal'>
       <FormItem
         label='Input Number'

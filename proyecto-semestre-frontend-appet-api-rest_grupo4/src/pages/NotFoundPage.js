@@ -7,8 +7,8 @@ const NotFoundPage = () => (
   <Result
     status='404'
     title='404'
-    subTitle='Ups... no encontramos la página que buscabas'
-    extra={ <Link to={ Routes.HOME }><Button type='primary'>Ir al inicio</Button></Link> }
+    subTitle='Pagina en desarrollo, no disponible'
+    extra={ <Link to={ Routes.HOME2 }><Button type='primary'>Ir al inicio</Button></Link> }
   />
 );
 

@@ -6,6 +6,7 @@ const publicRoutes = {
   LOGIN: '/ingreso',
   REGISTER: '/registro',
   SERVICES: '/hospedaje',
+  HAIRSTYLE: '/peluquería',
   USERS: '/usuarios',
   USERS_ID: `/usuario/:id`,
   HOME: '/',
@@ -16,7 +17,6 @@ const publicRoutes = {
 
 const privateRoutes = {
   LOGOUT: '/logout',
-  PRIVATE: '/peluquería',
   SERVICE_ID: '/servicio/:id'
 };
 

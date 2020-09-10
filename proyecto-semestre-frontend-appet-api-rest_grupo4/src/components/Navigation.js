@@ -53,15 +53,15 @@ const Navigation = ( props ) => {
         </Menu.Item>
 
         <Menu.Item key={ Routes.HOME }>
-          <Link to={ Routes.HOME } style={ linkStyle }>Home</Link>
+          <Link to={ Routes.HOME } style={ linkStyle }>Servicios</Link>
         </Menu.Item>
 
         <Menu.Item key={ Routes.SERVICES }>
           <Link to={ Routes.SERVICES } style={ linkStyle }>Hospedaje</Link>
         </Menu.Item>
 
-        <Menu.Item key={ Routes.PRIVATE }>
-          <Link to={ Routes.PRIVATE } style={ linkStyle }>Peluquería</Link>
+        <Menu.Item key={ Routes.HAIRSTYLE }>
+          <Link to={ Routes.HAIRSTYLE } style={ linkStyle }>Peluquería</Link>
         </Menu.Item>
 
         <Menu.Item key={ Routes.ANTD }>
@@ -75,13 +75,13 @@ const Navigation = ( props ) => {
         {
           isAuthenticated
             ? <Menu.SubMenu icon={ <UserOutlined /> } title={ currentUser && currentUser.name }>
-              <Menu.ItemGroup title='Item 1'>
-                <Menu.Item key='setting:1'>Option 1</Menu.Item>
-                <Menu.Item key='setting:2'>Option 2</Menu.Item>
+              <Menu.ItemGroup title='Proveedores'>
+                <Menu.Item key='setting:1'>Solicitudes</Menu.Item>
+                <Menu.Item key='setting:2'>Estado de servicios</Menu.Item>
               </Menu.ItemGroup>
-              <Menu.ItemGroup title='Item 2'>
-                <Menu.Item key='setting:3'>Option 3</Menu.Item>
-                <Menu.Item key='setting:4'>Option 4</Menu.Item>
+              <Menu.ItemGroup title='Clientes'>
+                <Menu.Item key='setting:3'>Solicitud servicio</Menu.Item>
+                <Menu.Item key='setting:4'>Estado del servicio</Menu.Item>
               </Menu.ItemGroup>
 
               <Menu.Item key={ Routes.LOGIN }>

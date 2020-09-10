@@ -8,7 +8,8 @@ const publicRoutes = {
   SERVICES: '/hospedaje',
   USERS: '/usuarios',
   USERS_ID: `/usuario/:id`,
-  HOME: '/inicio',
+  HOME: '/',
+  HOME2: '/inicio',
   ABOUT: '/acerca-de',
   ANTD: '/antd'
 };

@@ -48,6 +48,10 @@ const Navigation = ( props ) => {
           width: 'fit-content'
         } }
       >
+        <Menu.Item key={ Routes.HOME2 }>
+          <Link to={ Routes.HOME2 } style={ linkStyle }>Inicio</Link>
+        </Menu.Item>
+
         <Menu.Item key={ Routes.HOME }>
           <Link to={ Routes.HOME } style={ linkStyle }>Home</Link>
         </Menu.Item>

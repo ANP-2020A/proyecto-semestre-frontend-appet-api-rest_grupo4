@@ -12,6 +12,11 @@ const ServicesList = ( props ) => {
     const { services, isLoading, isError, mutate } = useServicesList();
 
 
+    const handleChangeCategory = ( e ) => {
+        // setArticles( props.articles.filter( ( article ) => e.target.value === 'all' || article.category_data.id ===
+        // e.target.value ) );
+    };
+
     if( isLoading ) {
       return <Row justify='center' gutter={ 30 }>
         {
@@ -32,8 +37,7 @@ const ServicesList = ( props ) => {
     }
 
     return (
-      <>
-
+/*      <>
         <ul>
           {
             services.map( ( service, i ) => (
@@ -43,7 +47,49 @@ const ServicesList = ( props ) => {
             ) )
           }
         </ul>
-      </>
+      </>*/
+
+
+        <>
+            {
+                props.categories &&
+                <Row justify='center'>
+                    <Col>
+                        <Radio.Group defaultValue='all' buttonStyle='solid' onChange={ handleChangeCategory }>
+                            <Radio.Button value='all'>Todas</Radio.Button> )
+                            {
+                                props.categories.map( ( category, index ) =>
+                                    <Radio.Button value={ category.id } key={ index }>{ category.name }</Radio.Button> )
+                            }
+                        </Radio.Group>
+                    </Col>
+                </Row>
+            }
+            <Row justify='center' gutter={ 30 }>
+                {
+                    services.map( ( service, i ) => (
+                        <Col xs={ 24 } sm={ 12 } md={ 8 } style={ { marginBottom: 30 } } key={ i }>
+                            { service.type
+                                ? <Card
+                                    title={ service.type }
+
+                                    cover={
+                                        <img alt={ service.type }
+                                             src={ `http://localhost:8000/storage/${ service.image }` } />
+                                    }
+                                >
+                                    { <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más</Link> }
+                                </Card>
+                                : <div style={ { textAlign: 'center' } }>
+                                    <Skeleton.Image style={ { width: 200 } } />
+                                    <Card title='' extra='' cover='' loading />
+                                </div>
+                            }
+                        </Col>
+                    ) )
+                }
+            </Row>
+        </>
     );
   }
 ;

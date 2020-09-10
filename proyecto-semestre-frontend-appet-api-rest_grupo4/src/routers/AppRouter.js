@@ -24,8 +24,8 @@ const AsyncHome = loadable( () => import( '../pages/Index' ), loadableOptions );
 const AsyncLogin = loadable( () => import( '../pages/Login' ), loadableOptions );
 const AsyncRegister = loadable( () => import( '../pages/Register' ), loadableOptions );
 const AsyncPrivate = loadable( () => import( '../pages/Private' ), loadableOptions );
-const AsyncArticles = loadable( () => import( '../pages/Articles' ), loadableOptions );
-const AsyncArticle = loadable( () => import( '../pages/Article' ), loadableOptions );
+const AsyncServices = loadable( () => import( '../pages/Services' ), loadableOptions );
+const AsyncService = loadable( () => import( '../pages/Service' ), loadableOptions );
 const AsyncAbout = loadable( () => import( '../pages/About' ), loadableOptions );
 const AsyncLogout = loadable( () => import( '../pages/Logout' ), loadableOptions );
 
@@ -46,11 +46,11 @@ const AppRouter = () => (
     <PublicRoute exact path={ Routes.HOME } component={ AsyncHome } />
     <PublicRoute path={ Routes.LOGIN } component={ AsyncLogin } />
     <PublicRoute path={ Routes.REGISTER } component={ AsyncRegister } />
-    <PublicRoute path={ Routes.ARTICLES } component={ AsyncArticles } />
+    <PublicRoute path={ Routes.SERVICES } component={ AsyncServices } />
     <PublicRoute path={ Routes.ABOUT } component={ AsyncAbout } />
 
     <PrivateRoute path={ Routes.PRIVATE } component={ AsyncPrivate } />
-    <PrivateRoute path={ Routes.ARTICLE_ID } component={ AsyncArticle } />
+    <PrivateRoute path={ Routes.SERVICE_ID } component={ AsyncService } />
     <PrivateRoute path={ Routes.LOGOUT } component={ AsyncLogout } />
 
     <Route component={ NotFoundPage } />

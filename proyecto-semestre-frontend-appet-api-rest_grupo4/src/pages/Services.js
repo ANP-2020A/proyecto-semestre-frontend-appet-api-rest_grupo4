@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import API from '../data';
 import { translateMessage } from '../utils/translateMessage';
-import ArticleList from '../components/ServicesList';
-import ArticleForm from '../components/ArticleForm';
+import ServicesList from '../components/ServicesList';
+import ServiceForm from '../components/ServiceForm';
 import { Button, message, Skeleton, Row, Col } from 'antd';
 import { useAuth } from '../providers/Auth';
 import { useCategories } from '../data/useCategories';
@@ -10,20 +10,20 @@ import ShowError from '../components/ShowError';
 import { mutate } from 'swr';
 
 /**
- * Fetch Articles from DB
+ * Fetch Services from DB
  */
-export const fetchArticles = async() => {
-  // console.log( `Show data fetched. Articles: ${ JSON.stringify( articles ) }` );
+export const fetchServices = async() => {
+  // console.log( `Show data fetched. Services: ${ JSON.stringify( articles ) }` );
 
-  return await API.get( '/articles' );
+  return await API.get( '/services' );
 };
 
 /**
- * Articles list page
+ * Services list page
  * @param props
  * @constructor
  */
-const Articles = ( props ) => {
+const Services = (props ) => {
 
   const [ visible, setVisible ] = useState( false );
   const categories = useCategories();
@@ -40,11 +40,11 @@ const Articles = ( props ) => {
   const afterCreate = async() => {
     try {
       // show skeleton
-      await mutate( '/articles', async articles => {
-        return { data: [ {}, ...articles.data ] };
+      await mutate( '/services', async services => {
+        return { data: [ {}, ...services.data ] };
       }, false );
 
-      await mutate( '/articles' );
+      await mutate( '/services' );
       setVisible( false ); // close the modal
     } catch( error ) {
       console.error(
@@ -66,11 +66,11 @@ const Articles = ( props ) => {
             setVisible( true );
           } }
         >
-          Nuevo artículo
+          Agregar Servicio
         </Button>
       }
 
-      {
+{/*      {
         categories.isLoading
           ? <Row type='flex' justify='center'>
             <Col>
@@ -81,7 +81,7 @@ const Articles = ( props ) => {
           </Row>
           : categories.isError
           ? <ShowError error={ categories.isError } />
-          : <ArticleForm
+          : <ServiceForm
             categories={ categories.categories }
             visible={ visible }
             update={ false }
@@ -90,12 +90,12 @@ const Articles = ( props ) => {
               setVisible( false );
             } }
           />
-      }
+      }*/}
 
-      <ArticleList categories={ categories.categories } />
+      <ServicesList categories={ categories.categories } />
     </div>
   );
 };
 
 
-export default Articles;
+export default Services;

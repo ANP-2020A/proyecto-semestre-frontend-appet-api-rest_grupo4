@@ -4,7 +4,7 @@ import withAuth from '../hocs/withAuth';
 const PrivatePage = () => {
   return <>
     <h1 className='title'>
-      Private Page
+      Pagina aun en contruccion
     </h1>
   </>;
 };

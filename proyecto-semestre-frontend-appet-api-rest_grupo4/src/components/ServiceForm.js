@@ -15,7 +15,7 @@ function getBase64( file, callback ) {
   reader.readAsDataURL( file );
 }
 
-const ArticleForm = ( {
+const ServiceForm = ( {
   visible,
   update,
   onSubmit,
@@ -47,7 +47,7 @@ const ArticleForm = ( {
         data.append( 'category_id', values.category_id );
 
         try {
-          await API.post( '/articles', data ); // post data to server
+          await API.post( '/services', data ); // post data to server
           form.resetFields();
           setFileList( [] );
           setImageUrl( null );
@@ -72,7 +72,7 @@ const ArticleForm = ( {
     form.validateFields()
       .then( async( values ) => {
         try {
-          await API.put( '/articles', values ); // post data to server
+          await API.put( '/services', values ); // post data to server
           form.resetFields();
           onSubmit();
         } catch( error ) {
@@ -226,4 +226,4 @@ const ArticleForm = ( {
   );
 };
 
-export default ArticleForm;
+export default ServiceForm;

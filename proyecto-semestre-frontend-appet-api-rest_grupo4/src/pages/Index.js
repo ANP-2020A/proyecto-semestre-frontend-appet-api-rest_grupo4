@@ -2,7 +2,7 @@ import React from 'react';
 //import ArticleList from '../components/ServicesList';
 //import { useArticleList } from '../data/useServicesList';
 //import ShowError from '../components/ShowError';
-import ServicesList from "../components/ServicesList";
+import ServicesHome from "../components/ServicesHome";
 
 const HomePage = () => {
 
@@ -16,7 +16,7 @@ const HomePage = () => {
       <p>Este es el contenido de la página principal.</p>
 
       <h2>Lista de Servicios APPET</h2>
-      <ServicesList />
+      <ServicesHome/>
     </>
   );
 };

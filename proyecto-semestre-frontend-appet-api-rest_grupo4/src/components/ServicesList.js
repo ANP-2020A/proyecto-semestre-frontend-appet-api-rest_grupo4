@@ -63,10 +63,13 @@ const ServicesList = ( props ) => {
 
                                     cover={
                                         <img alt={ service.type }
-                                             src={ `http://localhost:8000/storage/${ service.image }` } />
+                                             src={ `http://localhost:8000/storage/${ service.image }`} />
+
                                     }
+
                                 >
-                                    { <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más</Link> }
+                                    { <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más</Link>}
+                                    {<Button type="primary"  href={Routes.ADV}>Ver</Button>}
                                 </Card>
                                 : <div style={ { textAlign: 'center' } }>
                                     <Skeleton.Image style={ { width: 200 } } />

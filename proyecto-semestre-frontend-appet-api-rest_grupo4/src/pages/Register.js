@@ -140,35 +140,6 @@ const Register = () => {
                               placeholder='Confirma tu clave' />
             </Form.Item>
 
-            <Form.Item name='editorial'
-                       rules={ [
-                         {
-                           required: true,
-                           message: 'Ingresa el nombre de la editorial donde trabajas'
-                         }
-                       ] }
-                       hasFeedback
-            >
-              <Input prefix={ <EditOutlined /> } placeholder='Editorial' />
-            </Form.Item>
-
-            <Form.Item name='short_bio'
-                       rules={ [
-                         {
-                           required: true,
-                           message: 'Cuéntanos un poco sobre ti.'
-                         }
-                       ] }
-                       hasFeedback
-            >
-              <Input.TextArea prefix={ <FileTextOutlined /> }
-                              placeholder='Biografía corta'
-                              autoSize={ {
-                                minRows: 2,
-                                maxRows: 6
-                              } } />
-            </Form.Item>
-
             <Form.Item>
               <Button type='primary' htmlType='submit' className='login-form-button'>
                 Registrarme

@@ -1,7 +1,3 @@
-/**
- * Created by chalosalvador on 17/01/2019.
- */
-
 const publicRoutes = {
   LOGIN: '/ingreso',
   REGISTER: '/registro',
@@ -13,7 +9,9 @@ const publicRoutes = {
   HOME2: '/inicio',
   ABOUT: '/acerca-de',
   ANTD: '/antd',
-  VET: '/veterinaria'
+  VET: '/veterinaria',
+  ADV: '/anuncio',
+  ORDERDETAIL: '/detalleorden'
 };
 
 const privateRoutes = {

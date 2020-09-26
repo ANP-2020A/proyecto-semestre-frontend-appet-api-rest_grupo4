@@ -40,7 +40,11 @@ const Login = () => {
     <>
       {
         <Row justify='center' className='login'>
+          <img className={'imagen'} src="/images/portada1.jpeg" width={900} height={200}/>
+          <br></br>
+
           <Col span={ 8 }>
+            <h1 justify='center'>Inicia Sesión</h1>
             <Form
               name='login-form'
               className='login-form'
@@ -99,7 +103,7 @@ const Login = () => {
                 <Button type='primary' htmlType='submit' className='login-form-button'>
                   Ingresar
                 </Button>
-                <div>Soy nuevo, <Link to={ Routes.REGISTER }>registrarme</Link></div>
+                <div>Soy nuevo, <Link to={ Routes.REGISTER }>Registrarme</Link></div>
               </Form.Item>
             </Form>
           </Col>

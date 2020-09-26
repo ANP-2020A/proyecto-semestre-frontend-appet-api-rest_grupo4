@@ -12,7 +12,8 @@ const publicRoutes = {
   HOME: '/',
   HOME2: '/inicio',
   ABOUT: '/acerca-de',
-  ANTD: '/antd'
+  ANTD: '/antd',
+  VET: '/veterinaria'
 };
 
 const privateRoutes = {

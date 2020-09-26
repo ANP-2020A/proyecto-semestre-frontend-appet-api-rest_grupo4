@@ -37,18 +37,6 @@ const ServicesList = ( props ) => {
     }
 
     return (
-/*      <>
-        <ul>
-          {
-            services.map( ( service, i ) => (
-             <li>
-                 {service.title}
-             </li>
-            ) )
-          }
-        </ul>
-      </>*/
-
 
         <>
             {

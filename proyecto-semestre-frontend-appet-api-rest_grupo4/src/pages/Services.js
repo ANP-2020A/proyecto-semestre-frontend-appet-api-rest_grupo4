@@ -70,7 +70,7 @@ const Services = (props ) => {
         </Button>
       }
 
-{/*      {
+     {
         categories.isLoading
           ? <Row type='flex' justify='center'>
             <Col>
@@ -90,7 +90,7 @@ const Services = (props ) => {
               setVisible( false );
             } }
           />
-      }*/}
+      }
 
       <ServicesList categories={ categories.categories } />
     </div>

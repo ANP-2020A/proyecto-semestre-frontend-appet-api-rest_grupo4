@@ -23,7 +23,7 @@ export const fetchServices = async() => {
  * @param props
  * @constructor
  */
-const Hairstyle = (props ) => {
+const Vet = (props ) => {
 
     const [ visible, setVisible ] = useState( false );
     const categories = useCategories();
@@ -97,4 +97,5 @@ const Hairstyle = (props ) => {
     );
 };
 
-export default Hairstyle;
+
+export default Vet;

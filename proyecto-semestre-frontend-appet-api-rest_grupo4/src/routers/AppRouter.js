@@ -29,6 +29,7 @@ const AsyncServices = loadable( () => import( '../pages/Services' ), loadableOpt
 const AsyncService = loadable( () => import( '../pages/Service' ), loadableOptions );
 const AsyncAbout = loadable( () => import( '../pages/About' ), loadableOptions );
 const AsyncLogout = loadable( () => import( '../pages/Logout' ), loadableOptions );
+const AsyncVet = loadable( () => import( '../pages/Vet' ), loadableOptions );
 
 
 /**
@@ -51,6 +52,7 @@ const AppRouter = () => (
     <PublicRoute path={ Routes.SERVICES } component={ AsyncServices } />
     <PublicRoute path={ Routes.ABOUT } component={ AsyncAbout } />
     <PublicRoute path={ Routes.HAIRSTYLE } component={ AsyncHairstyle } />
+    <PublicRoute exact path={ Routes.VET } component={ AsyncVet } />
 
     <PrivateRoute path={ Routes.SERVICE_ID } component={ AsyncService } />
     <PrivateRoute path={ Routes.LOGOUT } component={ AsyncLogout } />

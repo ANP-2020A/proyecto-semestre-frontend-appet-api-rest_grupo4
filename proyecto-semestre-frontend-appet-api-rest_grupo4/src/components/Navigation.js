@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 import Routes from '../constants/routes';
@@ -36,82 +35,84 @@ const Navigation = ( props ) => {
   };
 
   return (
-    <>
-      <Menu
-        mode={ props.mode }
-        onClick={ handleClick }
-        className='menu'
-        theme='dark'
-        selectedKeys={ [ menuState.current ] }
-        style={ {
-          lineHeight: '64px',
-          width: 'fit-content'
-        } }
-      >
-        <Menu.Item key={ Routes.HOME2 }>
-          <Link to={ Routes.HOME2 } style={ linkStyle }>Inicio</Link>
-        </Menu.Item>
 
-        <Menu.Item key={ Routes.HOME }>
-          <Link to={ Routes.HOME } style={ linkStyle }>Servicios</Link>
-        </Menu.Item>
+      <>
+        <Menu
+            mode={ props.mode }
+            onClick={ handleClick }
+            className='menu'
+            theme='dark'
+            selectedKeys={ [ menuState.current ] }
+            style={ {
+              lineHeight: '64px',
+              width: 'fit-content'
+            } }
+        >
+          <Menu.Item key={ Routes.HOME2 }>
+            <Link to={ Routes.HOME2 } style={ linkStyle }>Inicio</Link>
+          </Menu.Item>
 
-        <Menu.Item key={ Routes.SERVICES }>
-          <Link to={ Routes.SERVICES } style={ linkStyle }>Hospedaje</Link>
-        </Menu.Item>
+          <Menu.Item key={ Routes.HOME }>
+            <Link to={ Routes.HOME } style={ linkStyle }>Servicios</Link>
+          </Menu.Item>
 
-        <Menu.Item key={ Routes.HAIRSTYLE }>
-          <Link to={ Routes.HAIRSTYLE } style={ linkStyle }>Peluquería</Link>
-        </Menu.Item>
+          <Menu.Item key={ Routes.SERVICES }>
+            <Link to={ Routes.SERVICES } style={ linkStyle }>Hospedaje</Link>
+          </Menu.Item>
 
-        <Menu.Item key={ Routes.VET }>
-          <Link to={ Routes.VET } style={ linkStyle }>Veterinaria</Link>
-        </Menu.Item>
+          <Menu.Item key={ Routes.HAIRSTYLE }>
+            <Link to={ Routes.HAIRSTYLE } style={ linkStyle }>Peluquería</Link>
+          </Menu.Item>
 
-        <Menu.Item key={ Routes.ABOUT }>
-          <Link to={ Routes.ABOUT } style={ linkStyle }>About</Link>
-        </Menu.Item>
+          <Menu.Item key={ Routes.VET }>
+            <Link to={ Routes.VET } style={ linkStyle }>Veterinaria</Link>
+          </Menu.Item>
 
-        {
-          isAuthenticated
-            ? <Menu.SubMenu icon={ <UserOutlined /> } title={ currentUser && currentUser.name } >
-              <Menu.ItemGroup title='Proveedores'>
-                <Menu.Item  key={ Routes.ABOUT }>
-                  <Link to={ Routes.ABOUT } style={ linkStyle }>Solicitudes</Link>
+          <Menu.Item key={ Routes.ABOUT }>
+            <Link to={ Routes.ABOUT } style={ linkStyle }>About</Link>
+          </Menu.Item>
+
+          {
+            isAuthenticated
+                ? <Menu.SubMenu icon={ <UserOutlined /> } title={ currentUser && currentUser.name } >
+                  <Menu.ItemGroup title='Proveedores'>
+                    <Menu.Item  key={ Routes.ABOUT }>
+                      <Link to={ Routes.ABOUT } style={ linkStyle }>Solicitudes</Link>
+                    </Menu.Item>
+
+                    <Menu.Item key={ Routes.ABOUT }>
+                      <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Servicios</Link>
+                    </Menu.Item>
+                  </Menu.ItemGroup>
+                  <Menu.ItemGroup title='Clientes'>
+                    <Menu.Item key={ Routes.ABOUT }>
+                      <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Pedidos</Link>
+                    </Menu.Item>
+                  </Menu.ItemGroup>
+                  <br></br>
+                  <Menu.Item key={ Routes.LOGIN }>Salir
+                    <Link to={ Routes.LOGOUT } className='logout-link'>
+                      {
+                        isCheckingAuth
+                            ? <LoadingOutlined />
+                            : <><LogoutOutlined /> Salir</>
+                      }
+                    </Link>
+                  </Menu.Item>
+                </Menu.SubMenu>
+                : <Menu.Item key={ Routes.LOGIN }>
+                  <Link to={ Routes.LOGIN }>
+                    {
+                      isCheckingAuth
+                          ? <LoadingOutlined />
+                          : <><LoginOutlined /> Ingresar</>
+                    }
+                  </Link>
                 </Menu.Item>
+          }
+        </Menu>
+      </>
 
-                <Menu.Item key={ Routes.ABOUT }>
-                  <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Servicios</Link>
-                </Menu.Item>
-              </Menu.ItemGroup>
-              <Menu.ItemGroup title='Clientes'>
-                <Menu.Item key={ Routes.ABOUT }>
-                  <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Pedidos</Link>
-                </Menu.Item>
-              </Menu.ItemGroup>
-                <br></br>
-              <Menu.Item key={ Routes.LOGIN }>Salir
-                <Link to={ Routes.LOGOUT } className='logout-link'>
-                  {
-                    isCheckingAuth
-                      ? <LoadingOutlined />
-                      : <><LogoutOutlined /> Salir</>
-                  }
-                </Link>
-              </Menu.Item>
-            </Menu.SubMenu>
-            : <Menu.Item key={ Routes.LOGIN }>
-              <Link to={ Routes.LOGIN }>
-                {
-                  isCheckingAuth
-                    ? <LoadingOutlined />
-                    : <><LoginOutlined /> Ingresar</>
-                }
-              </Link>
-            </Menu.Item>
-        }
-      </Menu>
-    </>
   );
 };
 

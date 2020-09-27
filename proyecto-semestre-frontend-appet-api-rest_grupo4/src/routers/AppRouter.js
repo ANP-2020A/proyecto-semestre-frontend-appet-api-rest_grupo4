@@ -34,6 +34,7 @@ const AsyncAdv = loadable( () => import( '../pages/advertisements' ), loadableOp
 const AsyncOrderDetail = loadable( () => import( '../pages/OrderDetail' ), loadableOptions );
 const AsyncReservation = loadable( () => import( '../pages/Reservation' ), loadableOptions );
 const AsyncAddservice = loadable( () => import( '../pages/Addservice' ), loadableOptions );
+const AsyncListServices = loadable( () => import( '../pages/ListServices' ), loadableOptions );
 
 /**
  * Este es el componente que se encarga de renderizar el componente adecuado
@@ -60,6 +61,7 @@ const AppRouter = () => (
     <PublicRoute exact path={ Routes.ORDERDETAIL } component={ AsyncOrderDetail } />
     <PublicRoute exact path={ Routes.RESERVATION } component={ AsyncReservation } />
     <PublicRoute exact path={ Routes.ADDSERVICE } component={ AsyncAddservice } />
+    <PublicRoute exact path={ Routes.LISTSERVICES } component={ AsyncListServices} />
 
     <PrivateRoute path={ Routes.SERVICE_ID } component={ AsyncService } />
     <PrivateRoute path={ Routes.LOGOUT } component={ AsyncLogout } />

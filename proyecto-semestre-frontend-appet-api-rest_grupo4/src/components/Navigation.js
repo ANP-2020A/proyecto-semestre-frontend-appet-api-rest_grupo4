@@ -75,6 +75,9 @@ const Navigation = ( props ) => {
           {
             isAuthenticated
                 ? <Menu.SubMenu icon={ <UserOutlined /> } title={ currentUser && currentUser.name } >
+                  <Menu.Item key={ Routes.REVIEWSERVICES }>
+                    <Link to={ Routes.REVIEWSERVICES } style={ linkStyle }>Revisión Solicitudes</Link>
+                  </Menu.Item>
                   <Menu.ItemGroup title='Proveedores'>
                     <Menu.Item  key={ Routes.ABOUT }>
                       <Link to={ Routes.ABOUT } style={ linkStyle }>Solicitudes</Link>

@@ -80,8 +80,8 @@ const Navigation = ( props ) => {
                       <Link to={ Routes.ABOUT } style={ linkStyle }>Solicitudes</Link>
                     </Menu.Item>
 
-                    <Menu.Item key={ Routes.ABOUT }>
-                      <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Servicios</Link>
+                    <Menu.Item key={ Routes.LISTSERVICES }>
+                      <Link to={ Routes.LISTSERVICES } style={ linkStyle }>Mis Servicios</Link>
                     </Menu.Item>
                   </Menu.ItemGroup>
                   <Menu.ItemGroup title='Clientes'>

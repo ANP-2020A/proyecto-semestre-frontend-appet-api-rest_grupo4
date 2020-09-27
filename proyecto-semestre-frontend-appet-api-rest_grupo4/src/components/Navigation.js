@@ -35,6 +35,7 @@ const Navigation = ( props ) => {
   };
 
   return (
+
       <>
         <Menu
             mode={ props.mode }
@@ -111,6 +112,7 @@ const Navigation = ( props ) => {
           }
         </Menu>
       </>
+
   );
 };
 

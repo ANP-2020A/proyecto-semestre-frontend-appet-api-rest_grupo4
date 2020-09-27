@@ -12,7 +12,8 @@ const publicRoutes = {
   VET: '/veterinaria',
   ADV: '/anuncio',
   ORDERDETAIL: '/detalleorden',
-  RESERVATION:'/reservación'
+  RESERVATION:'/reservación',
+  ADDSERVICE:'/nuevoservicio'
 };
 
 const privateRoutes = {

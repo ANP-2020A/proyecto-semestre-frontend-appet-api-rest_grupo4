@@ -16,10 +16,10 @@ h3 {
     font-size: 25px;
     font-weight: normal;
 }
-h4{
+.title{
     font-family: Brush Script MT;
     color: #F17525 !important;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: normal;
 }
 .ant-btn-primary {

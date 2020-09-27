@@ -69,7 +69,7 @@ const ServicesList = ( props ) => {
 
                                 >
 
-                                    {<Button type="primary"  href={Routes.ADV}>Ver</Button>}
+                                    {<Button type="primary"  href={Routes.ADV}>Más Información</Button>}
                                 </Card>
                                 : <div style={ { textAlign: 'center' } }>
                                     <Skeleton.Image style={ { width: 200 } } />

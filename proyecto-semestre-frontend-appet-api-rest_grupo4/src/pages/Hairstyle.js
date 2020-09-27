@@ -58,6 +58,7 @@ const Hairstyle = (props ) => {
 
     return (
         <div>
+            <h2 align={"center"}>Servicios de Peluquería</h2>
             {
                 auth.isAuthenticated &&
                 <Button

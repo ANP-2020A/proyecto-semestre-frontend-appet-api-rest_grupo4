@@ -25,6 +25,7 @@ export const fetchServices = async() => {
  */
 const Services = (props ) => {
 
+
   const [ visible, setVisible ] = useState( false );
   const categories = useCategories();
 
@@ -57,7 +58,10 @@ const Services = (props ) => {
   };
 
   return (
+
     <div>
+      <h2 align={"center"}>Servicios de Hospedaje</h2>
+
       {
         auth.isAuthenticated &&
         <Button
@@ -67,30 +71,11 @@ const Services = (props ) => {
           } }
         >
           Agregar Servicio
+
         </Button>
       }
 
-     {
-        categories.isLoading
-          ? <Row type='flex' justify='center'>
-            <Col>
-              <Skeleton.Button active />
-              <Skeleton.Button active />
-              <Skeleton.Button active />
-            </Col>
-          </Row>
-          : categories.isError
-          ? <ShowError error={ categories.isError } />
-          : <ServiceForm
-            categories={ categories.categories }
-            visible={ visible }
-            update={ false }
-            onSubmit={ afterCreate }
-            onCancel={ () => {
-              setVisible( false );
-            } }
-          />
-      }
+
 
       <ServicesList categories={ categories.categories } />
     </div>

@@ -2,12 +2,6 @@ import React from 'react';
 import {Layout, Row, Col, Button, Popover, Divider, Space, Card, Form, Input, Checkbox} from 'antd';
 import Icon, {MailOutlined} from '@ant-design/icons';
 import '../styles/orderdetail.css'
-import { Link, useLocation } from 'react-router-dom';
-import {
-    BookOutlined, CopyOutlined, LoginOutlined, QuestionCircleOutlined, UnorderedListOutlined
-} from '@ant-design/icons';
-import Routes from '../constants/routes';
-import {EyeInvisibleOutlined, EyeTwoTone, LockOutlined, UserOutlined} from "@ant-design/icons/lib";
 const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
 const OrderDetail = () => {
@@ -17,7 +11,7 @@ const OrderDetail = () => {
                 <Col span={12}>
                     <h1>Detalle de pedido</h1>
                     <br></br>
-                    <img src="/images/det.jpeg" width={200} height={100}/>
+                    <img src="/images/det.jpg" width={200} height={100}/>
                     <br></br>
                     <h2>Médico veterinario</h2>
                     <h2>Precio Consulta:</h2>

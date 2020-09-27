@@ -33,7 +33,7 @@ const ServicesList = ( props ) => {
     }
 
     if( isError ) {
-      return <ShowError error={ isError } />;
+        return <ShowError error={ isError } />;
     }
 
     return (
@@ -68,7 +68,7 @@ const ServicesList = ( props ) => {
                                     }
 
                                 >
-                                    { <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más</Link>}
+
                                     {<Button type="primary"  href={Routes.ADV}>Ver</Button>}
                                 </Card>
                                 : <div style={ { textAlign: 'center' } }>

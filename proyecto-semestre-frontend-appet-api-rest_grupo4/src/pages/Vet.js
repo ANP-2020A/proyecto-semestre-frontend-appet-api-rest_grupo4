@@ -58,6 +58,7 @@ const Vet = (props ) => {
 
     return (
         <div>
+            <h2 align={"center"}>Servicios de Veterinaria</h2>
             {
                 auth.isAuthenticated &&
                 <Button

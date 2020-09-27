@@ -8,7 +8,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h2>Lista de Servicios</h2>
+      <h2 align={"center"}>Lista de Servicios</h2>
       <ServicesHome/>
     </>
   );

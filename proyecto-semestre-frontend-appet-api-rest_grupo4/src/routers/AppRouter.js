@@ -32,6 +32,7 @@ const AsyncLogout = loadable( () => import( '../pages/Logout' ), loadableOptions
 const AsyncVet = loadable( () => import( '../pages/Vet' ), loadableOptions );
 const AsyncAdv = loadable( () => import( '../pages/advertisements' ), loadableOptions );
 const AsyncOrderDetail = loadable( () => import( '../pages/OrderDetail' ), loadableOptions );
+const AsyncReservation = loadable( () => import( '../pages/Reservation' ), loadableOptions );
 
 /**
  * Este es el componente que se encarga de renderizar el componente adecuado
@@ -56,6 +57,7 @@ const AppRouter = () => (
     <PublicRoute exact path={ Routes.VET } component={ AsyncVet } />
     <PublicRoute exact path={ Routes.ADV } component={ AsyncAdv } />
     <PublicRoute exact path={ Routes.ORDERDETAIL } component={ AsyncOrderDetail } />
+    <PublicRoute exact path={ Routes.RESERVATION } component={ AsyncReservation } />
 
     <PrivateRoute path={ Routes.SERVICE_ID } component={ AsyncService } />
     <PrivateRoute path={ Routes.LOGOUT } component={ AsyncLogout } />

@@ -1,12 +1,10 @@
 import React from 'react';
-import { Layout, Row, Col, Button, Popover,Divider,Space,Card } from 'antd';
+import { Layout, Row, Col, Button, Popover,Divider,Space,Card, Image} from 'antd';
 import '../styles/inicio.css'
-import { Link, useLocation } from 'react-router-dom';
-import {
-    BookOutlined, CopyOutlined, LoginOutlined, QuestionCircleOutlined, UnorderedListOutlined
-} from '@ant-design/icons';
 import Routes from '../constants/routes';
-const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
+import {LikeOutlined, HeartOutlined,CheckCircleOutlined, HomeOutlined}from "@ant-design/icons";
+const { Meta } = Card;
+
 
 const AboutPage = () => {
 
@@ -32,98 +30,51 @@ const AboutPage = () => {
 
                 <Col span={24}>
 
-                    <Button type="primary"  href={Routes.SERVICES}>Reserva ahora</Button>
+                    <Button type="primary"  href={Routes.RESERVATION}>Reserva ahora</Button>
                     <br/>
                     <Row justify='center'>
                         <Col span={6}>
-                            <Card title="Amor" >
-                                <div >
-                                    <img width={150} height={120} src="/images/1.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
+                            <br/>
+                            <Image
+                                width={200}
+                                height={130}
+                                src="/images/1.jpeg"
+                            />
+                            <Meta title="Cuidado" /> <LikeOutlined/>
                             <br/>
                         </Col>
 
                         <Col span={6}>
-                            <Card title="Seguridad" >
-                                <div >
-                                    <img width={150} height={120} src="/images/2.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
+                            <br/>
+                            <Image
+                                width={200}
+                                height={130}
+                                src="/images/7.jpeg"
+                            />
+                            <Meta title="Cariño"  /> <HeartOutlined />
                             <br/>
                         </Col>
                         <Col span={6}>
-                            <Card title="Áreas amplias" >
-                                <div >
-                                    <img width={150} height={120} src="/images/3.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
+                            <br/>
+                            <Image
+                                width={200}
+                                height={130}
+                                src="/images/3.jpeg"
+                            />
+                            <Meta title="Seguridad"  /> <CheckCircleOutlined />
                             <br/>
                         </Col>
                         <Col span={6}>
-                            <Card title="Medicina" >
-                                <div >
-                                    <img width={150} height={120} src="/images/4.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
+                            <br/>
+                            <Image
+                                width={200}
+                                height={130}
+                                src="/images/4.jpeg"
+                            />
+                            <Meta title="Areas Amplias" /><HomeOutlined />
                             <br/>
                         </Col>
-                        <Col span={6}>
-                            <Card title="Lealtad" >
-                                <div >
-                                    <img width={150} height={120} src="/images/5.jpeg" />
-                                </div>
-                                <br/>
 
-                                <br/>
-                            </Card>
-                            <br/>
-                        </Col>
-                        <Col span={6}>
-                            <Card title="Cuidado" >
-                                <div >
-                                    <img width={150} height={120} src="/images/6.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
-                            <br/>
-                        </Col>
-                        <Col span={6}>
-                            <Card title="Cariño" >
-                                <div >
-                                    <img width={150} height={120} src="/images/7.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
-                            <br/>
-                        </Col>
-                        <Col span={6}>
-                            <Card title="Felicidad" >
-                                <div >
-                                    <img width={150} height={120} src="/images/8.jpeg" />
-                                </div>
-                                <br/>
-
-                                <br/>
-                            </Card>
-                            <br/>
-                        </Col>
                     </Row>
 
 

@@ -41,11 +41,12 @@ const ServicesHome = ( props ) => {
                                 { service.title
                                     ? <Card
                                         title={ service.title }
-                                        extra={ <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más</Link> }
+
                                         cover={
                                             <img alt={ service.title }
                                                  src={ `http://localhost:8000/storage/${ service.image }` } /> }
-                                    >
+
+                                    >{ <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más Información</Link> }
 
                                     </Card>
                                     : <div style={ { textAlign: 'center' } }>

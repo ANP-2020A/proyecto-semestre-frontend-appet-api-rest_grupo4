@@ -11,7 +11,8 @@ const publicRoutes = {
   ANTD: '/antd',
   VET: '/veterinaria',
   ADV: '/anuncio',
-  ORDERDETAIL: '/detalleorden'
+  ORDERDETAIL: '/detalleorden',
+  RESERVATION:'/reservación'
 };
 
 const privateRoutes = {

@@ -74,17 +74,23 @@ const Navigation = ( props ) => {
 
         {
           isAuthenticated
-            ? <Menu.SubMenu icon={ <UserOutlined /> } title={ currentUser && currentUser.name }>
+            ? <Menu.SubMenu icon={ <UserOutlined /> } title={ currentUser && currentUser.name } >
               <Menu.ItemGroup title='Proveedores'>
-                <Menu.Item key='setting:1'>Solicitudes</Menu.Item>
-                <Menu.Item key='setting:2'>Estado de servicios</Menu.Item>
+                <Menu.Item  key={ Routes.ABOUT }>
+                  <Link to={ Routes.ABOUT } style={ linkStyle }>Solicitudes</Link>
+                </Menu.Item>
+
+                <Menu.Item key={ Routes.ABOUT }>
+                  <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Servicios</Link>
+                </Menu.Item>
               </Menu.ItemGroup>
               <Menu.ItemGroup title='Clientes'>
-                <Menu.Item key='setting:3'>Solicitud servicio</Menu.Item>
-                <Menu.Item key='setting:4'>Estado del servicio</Menu.Item>
+                <Menu.Item key={ Routes.ABOUT }>
+                  <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Pedidos</Link>
+                </Menu.Item>
               </Menu.ItemGroup>
-
-              <Menu.Item key={ Routes.LOGIN }>
+                <br></br>
+              <Menu.Item key={ Routes.LOGIN }>Salir
                 <Link to={ Routes.LOGOUT } className='logout-link'>
                   {
                     isCheckingAuth

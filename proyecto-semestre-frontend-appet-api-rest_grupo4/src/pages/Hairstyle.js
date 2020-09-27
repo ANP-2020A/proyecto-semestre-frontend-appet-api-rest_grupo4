@@ -8,6 +8,7 @@ import { useAuth } from '../providers/Auth';
 import { useCategories } from '../data/useCategories';
 import ShowError from '../components/ShowError';
 import { mutate } from 'swr';
+import Routes from "../constants/routes";
 
 /**
  * Fetch Services from DB
@@ -60,15 +61,7 @@ const Hairstyle = (props ) => {
         <div>
             <h2 align={"center"}>Servicios de Peluquería</h2>
             {
-                auth.isAuthenticated &&
-                <Button
-                    type='primary'
-                    onClick={ () => {
-                        setVisible( true );
-                    } }
-                >
-                    Agregar Servicio
-                </Button>
+                <Button type="primary" href={Routes.ADDSERVICE}>Agregar Servicio</Button>
             }
 
             {/*      {

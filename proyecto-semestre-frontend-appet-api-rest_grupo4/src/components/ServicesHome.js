@@ -46,7 +46,7 @@ const ServicesHome = ( props ) => {
                                             <img alt={ service.title }
                                                  src={ `http://localhost:8000/storage/${ service.image }` } /> }
 
-                                    >{ <Link to={ Routes.SERVICE_ID.replace( ':id', service.id ) }>Más Información</Link> }
+                                    >{<Button type="primary"  href={Routes.ADV}>Más Información</Button>}
 
                                     </Card>
                                     : <div style={ { textAlign: 'center' } }>

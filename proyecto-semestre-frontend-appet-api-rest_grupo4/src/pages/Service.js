@@ -24,6 +24,7 @@ const ServicePage = () => {
               Servicio de  { service.service.title }
             </h1>
             <p>{ service.service.body }</p>
+
           </>
       }
 

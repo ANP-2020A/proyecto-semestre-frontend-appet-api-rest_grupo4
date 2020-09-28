@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Layout, Row, Col, Button, Popover, Divider, Space, Card, Image, Skeleton, message} from 'antd';
-import '../styles/inicio.css'
+import '../styles/reservation.css'
 import Routes from '../constants/routes';
 import {LikeOutlined, HeartOutlined,CheckCircleOutlined, HomeOutlined}from "@ant-design/icons";
 import {useServicesList} from "../data/useServicesList";
@@ -10,6 +10,7 @@ import {mutate} from "swr";
 import {translateMessage} from "../utils/translateMessage";
 import ServicesList from "../components/ServicesList";
 //import { Row, Col } from 'antd';
+import { Select } from 'antd';
 const { Meta } = Card;
 export const fetchServices = async() => {
     // console.log( `Show data fetched. Services: ${ JSON.stringify( articles ) }` );
@@ -20,6 +21,7 @@ export const fetchServices = async() => {
 const Reservation = () => {
     const { services, isLoading, isError, mutate } = useServicesList();
     const [ visible, setVisible ] = useState( false );
+    const { Option, OptGroup } = Select;
 
     const afterCreate = async() => {
         try {
@@ -38,7 +40,9 @@ const Reservation = () => {
         }
     };
 
-
+    function handleChange(value) {
+        console.log(`selected ${value}`);
+    }
 
     if( isLoading ) {
         return <Row justify='center' gutter={ 30 }>
@@ -76,20 +80,63 @@ const Reservation = () => {
                         <Col span={9}>
                             <br/>
                             <Button type="primary" >Todos los anuncios</Button>
+                            <br/><br/><br/>
+                            <h1>TODAS LAS CATEGORÍAS</h1><br/>
+                            <>
+                                <Button block="danger" block >
+                                    Hospedaje
+                                </Button>
+                                <Button block>Peluquería</Button>
+                                <Button block="danger" block>
+                                    Veterinaria
+                                </Button>
+                            </>
                             <br/><br/>
-                            <h1>TODAS LAS CATEGORÍAS</h1>
+                            <style>
+                            <h1>Precio</h1>
+                            </style>
+
+
+                            <Select defaultValue="Mascota" style={{ width: 200 }} onChange={handleChange}>
+                                <OptGroup label="Caninos">
+                                    <Option value="Perro">Perro</Option>
+                                    <Option value="Perra">Perra</Option>
+                                </OptGroup>
+                                <OptGroup label="Felinos">
+                                    <Option value="Gato">Gato</Option>
+                                    <Option value="Gata">Gata</Option>
+                                </OptGroup>
+                            </Select>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <img src="/images/perro.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/cara.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/hotel_canino.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/tienda_mascotas.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/peluqueria_canina1.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/veterinaria.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/perro.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/cara.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/hotel_canino.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/tienda_mascotas.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/peluqueria_canina1.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/veterinaria.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/peluqueria_canina1.png" width={250} height={200}/><br/><br/>
+                            <img src="/images/veterinaria.png" width={250} height={200}/><br/><br/>
+
+
                         </Col>
 
                         <Col span={9}>
                             <br/>
                             <Button type="primary"  >Vista Resumida</Button>
-                            <br/>
+                            <br/><br/><br/>
 
-                            <Col span={20}>
+                            <Col span={2}>
                                 <br/>
                                 {
                                     services.map((service, i) => (
                                         <Col xs={24} sm={12} md={8} style={{marginBottom: 30}} key={i}>
+
                                             {service.type
                                                 ? <Card
                                                     title={service.type}
@@ -117,15 +164,37 @@ const Reservation = () => {
                         <Col span={6}>
                             <br/>
                             <Button type="primary" >Listar</Button>
-                            <br/><br/><br/>
-                            <Button type="primary"  href={Routes.ADV}>Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <Button type="primary"  href={Routes.ADV} >Reservar</Button>
 
                         </Col>
                     </Row>
                 </Col>
             </Row>
 
-            <Button type="primary"  href={Routes.ADV}>Reserva</Button>
+            <Button type="primary"  href={Routes.ADV}>Buscar</Button>
 
         </>
 

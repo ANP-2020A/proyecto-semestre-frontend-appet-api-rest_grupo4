@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import {
     Layout, Row, Col, Button, Popover, Divider, Space, Card, Image, Skeleton, Input,Form} from 'antd';
-import '../styles/inicio.css'
+import '../styles/addservice.css'
 import {DollarCircleOutlined} from '@ant-design/icons'
 import {useServicesList} from "../data/useServicesList";
 import ShowError from "../components/ShowError";
 import API from "../data";
+import Routes from "../constants/routes";
 
 
 
@@ -66,21 +67,21 @@ const DetailOrder = (props) => {
                         <Image height={200} width={1265} src={"/images/10.jpeg"} ></Image>
             </div>
 
-            <h2 align={"center"}>
+            <h1 align={"center"}>
                 DETALLE DEL PEDIDO
-            </h2>
+            </h1>
                 {
                     services.map((service,index)=>{
                         return(
-                            <Card title={service.type} bordered={false} style={{ width: 500 }} key={index}>
-                                <h1 > Precio de Consulta: <DollarCircleOutlined /> {service.price}</h1>
-                                <h1> Precio: <DollarCircleOutlined /> {service.price}</h1>
-                                <h1>Enviar un Mensaje a {service.user}</h1>
+                            <Card title={service.type} bordered={false} style={{ width: 500 }} key={index} justify={'center'}>
+                                <h3 > Precio de Consulta: <DollarCircleOutlined /> {service.price}</h3>
+                                <h3> Precio: <DollarCircleOutlined /> {service.price}</h3>
+                                <h3>Enviar un Mensaje a {service.user}</h3>
                                 <Form.Item name={['user', 'introduction']} >
                                     <Input.TextArea />
                                 </Form.Item>
                                 <Form.Item >
-                                    <Button type="primary" htmlType="submit">
+                                    <Button type="primary" htmlType="submit" href={Routes.ORDERS}>
                                         Enviar
                                     </Button>
                                 </Form.Item>

@@ -30,3 +30,7 @@ h3 {
     height:40px;
     position: center;
 }
+.Card{
+    position: center;
+    justify-content: center;
+}

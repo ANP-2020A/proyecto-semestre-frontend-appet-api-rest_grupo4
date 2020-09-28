@@ -78,6 +78,9 @@ const Navigation = ( props ) => {
                   <Menu.Item key={ Routes.REVIEWSERVICES }>
                     <Link to={ Routes.REVIEWSERVICES } style={ linkStyle }>Revisión Solicitudes</Link>
                   </Menu.Item>
+                  <Menu.Item key={ Routes.ORDERS }>
+                    <Link to={ Routes.ORDERS } style={ linkStyle }>Mis Pedidos</Link>
+                  </Menu.Item>
                   <Menu.ItemGroup title='Proveedores'>
                     <Menu.Item  key={ Routes.REQUEST }>
                       <Link to={ Routes.REQUEST } style={ linkStyle }>Solicitudes</Link>
@@ -85,11 +88,6 @@ const Navigation = ( props ) => {
 
                     <Menu.Item key={ Routes.LISTSERVICES }>
                       <Link to={ Routes.LISTSERVICES } style={ linkStyle }>Mis Servicios</Link>
-                    </Menu.Item>
-                  </Menu.ItemGroup>
-                  <Menu.ItemGroup title='Clientes'>
-                    <Menu.Item key={ Routes.ABOUT }>
-                      <Link to={ Routes.ABOUT } style={ linkStyle }>Mis Pedidos</Link>
                     </Menu.Item>
                   </Menu.ItemGroup>
                   <br></br>

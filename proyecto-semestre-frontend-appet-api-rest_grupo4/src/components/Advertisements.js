@@ -77,7 +77,7 @@ const Advertisements = ( props ) => {
                                             </Row>
                                             <br></br><br></br>
                                             <Row gutter={4} justify={'center'}>
-                                                {<Button type="primary"  href={Routes.ORDERDETAIL}>Solicitar</Button>}
+                                                {<Button type="primary"  href={Routes.DETAILORDER}>Solicitar</Button>}
                                             </Row>
                                         </>
                                     </>

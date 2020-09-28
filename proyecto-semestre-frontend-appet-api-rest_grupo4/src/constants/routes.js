@@ -14,9 +14,9 @@ const publicRoutes = {
   ORDERDETAIL: '/detalleorden',
   RESERVATION:'/reservación',
   ADDSERVICE:'/nuevoservicio',
+  REQUEST:'/solicitud',
   REVIEWSERVICES:'/revisionservicios',
   LISTSERVICES:'/listaservicios'
-
 };
 
 const privateRoutes = {

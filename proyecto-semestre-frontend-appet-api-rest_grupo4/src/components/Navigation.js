@@ -79,8 +79,8 @@ const Navigation = ( props ) => {
                     <Link to={ Routes.REVIEWSERVICES } style={ linkStyle }>Revisión Solicitudes</Link>
                   </Menu.Item>
                   <Menu.ItemGroup title='Proveedores'>
-                    <Menu.Item  key={ Routes.ABOUT }>
-                      <Link to={ Routes.ABOUT } style={ linkStyle }>Solicitudes</Link>
+                    <Menu.Item  key={ Routes.REQUEST }>
+                      <Link to={ Routes.REQUEST } style={ linkStyle }>Solicitudes</Link>
                     </Menu.Item>
 
                     <Menu.Item key={ Routes.LISTSERVICES }>

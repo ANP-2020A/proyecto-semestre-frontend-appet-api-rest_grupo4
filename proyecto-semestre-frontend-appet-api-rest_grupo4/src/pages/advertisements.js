@@ -76,7 +76,7 @@ const Advertisements = (props) => {
     }
     return (
         <>
-            {services.map((service) => (
+            {services.map((service,index) => (
                 <Card position={'center'}
                     style={{width: 300}}
 
@@ -100,7 +100,7 @@ const Advertisements = (props) => {
                         description="This is the description"
                     />
                     <Form.Item>
-                        {<Button position='center' type="primary"  href={Routes.ORDERDETAIL}>Solicitar</Button>}
+                        {<Button position='center' type="primary"  href={Routes.DETAILORDER} key={index}>Solicitar</Button>}
                     </Form.Item>
                 </Card>
 

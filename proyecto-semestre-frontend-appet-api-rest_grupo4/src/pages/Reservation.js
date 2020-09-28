@@ -83,11 +83,11 @@ const Reservation = () => {
                             <br/><br/><br/>
                             <h1>TODAS LAS CATEGORÍAS</h1><br/>
                             <>
-                                <Button block="danger" block >
+                                <Button block="danger" block href={Routes.SERVICES}>
                                     Hospedaje
                                 </Button>
-                                <Button block>Peluquería</Button>
-                                <Button block="danger" block>
+                                <Button block href={Routes.HAIRSTYLE}>Peluquería</Button>
+                                <Button block="danger" block href={Routes.VET}>
                                     Veterinaria
                                 </Button>
                             </>

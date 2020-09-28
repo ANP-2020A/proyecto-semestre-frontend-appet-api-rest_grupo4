@@ -8,8 +8,8 @@ import { translateMessage } from '../utils/translateMessage';
 import ServicesList from '../components/ServicesList';
 import {mutate} from "swr";
 import { useAuth } from '../providers/Auth';
-import ReviewServ from "../components/ReviewServ";
-import {useService} from "../data/useService";
+import OrdersComp from "../components/OrdersComp";
+import {useOrder} from "../data/useOrder";
 
 /**
  * Fetch Services from DB
@@ -17,20 +17,20 @@ import {useService} from "../data/useService";
 export const fetchServices = async () => {
     // console.log( `Show data fetched. Services: ${ JSON.stringify( articles ) }` );
 
-    return await API.get('/services');
+    return await API.get('/orders');
 };
 /**
  * Services list page
  * @param props
  * @constructor
  */
-const ReviewServices = (props) => {
+const Orders = (props) => {
     const [ visible, setVisible ] = useState( false );
-    const services = useService();
+    const orders = useOrder();
 
     const auth = useAuth();
 
-    console.log( 'services', services );
+    console.log( 'orders', orders );
 
     /**
      * Executed after the form is submitted
@@ -40,11 +40,11 @@ const ReviewServices = (props) => {
     const afterCreate = async() => {
         try {
             // show skeleton
-            await mutate( '/services', async services => {
-                return { data: [ {}, ...services.data ] };
+            await mutate( '/orders', async orders => {
+                return { data: [ {}, ...orders.data ] };
             }, false );
 
-            await mutate( '/services' );
+            await mutate( '/orders' );
             setVisible( false ); // close the modal
         } catch( error ) {
             console.error(
@@ -59,10 +59,8 @@ const ReviewServices = (props) => {
         <>
             <>
                 <Row gutter={8} justify={'center'}>
-                    <h1> Servicios a Revisión </h1>
-                    <br></br>
-                    <br></br>
-                    <img src="/images/review.jpg" width={500} height={150}/>
+                    <h1>Lista Pedidos  </h1>
+                    <img src="/images/list_services.jpg" width={475} height={100}/>
                     <br></br><br></br>
                 </Row>
             </>
@@ -70,16 +68,13 @@ const ReviewServices = (props) => {
                 <Divider orientation="left"></Divider>
                 <Row gutter={24} justify={'center'}>
                     <Col className="gutter-row" span={4}>
-                        <h1>Título del Servicio</h1>
+                        <h1>Fecha Orden</h1>
                     </Col>
                     <Col className="gutter-row" span={4}>
-                        <h1>Ciudad</h1>
+                        <h1>Fecha de atención</h1>
                     </Col>
                     <Col className="gutter-row" span={4}>
-                        <h1>Descripción del Servicio</h1>
-                    </Col>
-                    <Col className="gutter-row" span={4}>
-                        <h1>Precio</h1>
+                        <h1>Descripción</h1>
                     </Col>
                     <Col className="gutter-row" span={4}>
                         <h1>Estado</h1>
@@ -87,8 +82,9 @@ const ReviewServices = (props) => {
                 </Row>
                 <Divider orientation="left"></Divider>
             </>
-            <ReviewServ services={ services.service } />
+            <OrdersComp orders={ orders.orders} />
         </>
     );
 };
-export default ReviewServices;
+export default Orders;
+

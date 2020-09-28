@@ -38,6 +38,7 @@ const AsyncDetailOrder = loadable( () => import( '../pages/DetailOrder' ), loada
 const AsyncRequest = loadable( () => import( '../pages/Request' ), loadableOptions );
 const AsyncRewiewServices = loadable( () => import( '../pages/ReviewSevices' ), loadableOptions );
 const AsyncListServices = loadable( () => import( '../pages/ListServices' ), loadableOptions );
+const AsyncListOrders = loadable( () => import( '../pages/Orders' ), loadableOptions );
 
 
 /**
@@ -69,6 +70,7 @@ const AppRouter = () => (
     <PublicRoute exact path={ Routes.REQUEST } component={ AsyncRequest } />
     <PublicRoute exact path={ Routes.REVIEWSERVICES } component={ AsyncRewiewServices } />
     <PublicRoute exact path={ Routes.LISTSERVICES } component={ AsyncListServices} />
+    <PublicRoute exact path={ Routes.ORDERS} component={ AsyncListOrders} />
 
     <PrivateRoute path={ Routes.SERVICE_ID } component={ AsyncService } />
     <PrivateRoute path={ Routes.LOGOUT } component={ AsyncLogout } />

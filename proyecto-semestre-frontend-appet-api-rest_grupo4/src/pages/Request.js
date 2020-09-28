@@ -53,6 +53,7 @@ const Request = () => {
     </>;
 };
 const columns = [
+
     {
         title: 'Dirección',
         dataIndex: 'direction',
@@ -83,10 +84,10 @@ const columns = [
 
 const data = [
     {
-        direction: 'Chone',
-        name: 'Dav' +
-            'id',
-        order: 69,
+        direction: '514 Abigale Estates\n' +
+            'Cummingsburgh, TX 04929',
+        name: 'Aimee Bechtelar',
+        order: 1,
 
     },
 

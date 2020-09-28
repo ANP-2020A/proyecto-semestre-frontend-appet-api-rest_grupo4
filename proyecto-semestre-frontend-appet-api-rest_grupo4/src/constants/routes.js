@@ -13,7 +13,8 @@ const publicRoutes = {
   ADV: '/anuncio',
   ORDERDETAIL: '/detalleorden',
   RESERVATION:'/reservación',
-  ADDSERVICE:'/nuevoservicio'
+  ADDSERVICE:'/nuevoservicio',
+  REQUEST:'/solicitud'
 };
 
 const privateRoutes = {

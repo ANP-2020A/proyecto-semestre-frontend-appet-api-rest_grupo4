@@ -5,12 +5,12 @@ import Routes from '../constants/routes';
 import {LikeOutlined, HeartOutlined,CheckCircleOutlined, HomeOutlined}from "@ant-design/icons";
 const { Meta } = Card;
 
-
 const AboutPage = () => {
 
     return (
         <>
             <Row className='first-part'>
+
                 <Col span={24}>
                     <img src="/images/2.jpeg" />
 
@@ -76,9 +76,6 @@ const AboutPage = () => {
                         </Col>
 
                     </Row>
-
-
-
                 </Col>
             </Row>
 

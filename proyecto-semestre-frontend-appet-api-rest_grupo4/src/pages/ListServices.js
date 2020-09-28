@@ -8,7 +8,7 @@ import { translateMessage } from '../utils/translateMessage';
 import ServicesList from '../components/ServicesList';
 import {mutate} from "swr";
 import { useAuth } from '../providers/Auth';
-import Advertisements from "../components/Advertisements";
+import ListServ from "../components/ListServ";
 import {useService} from "../data/useService";
 
 /**
@@ -58,13 +58,34 @@ const ListServices = (props) => {
     return (
         <>
             <>
-                <Row justify={'center'}>
-                    <h1>Detalle del Servicio  </h1>
+                <Row gutter={8} justify={'center'}>
+                    <h1>Lista Servicios  </h1>
                     <img src="/images/list_services.jpg" width={475} height={100}/>
                     <br></br><br></br>
                 </Row>
             </>
-            <Advertisements services={ services.service } />
+            <>
+                <Divider orientation="left"></Divider>
+                <Row gutter={24} justify={'center'}>
+                    <Col className="gutter-row" span={4}>
+                        <h1>Servicio</h1>
+                    </Col>
+                    <Col className="gutter-row" span={4}>
+                        <h1>Ciudad</h1>
+                    </Col>
+                    <Col className="gutter-row" span={4}>
+                        <h1>Descripción</h1>
+                    </Col>
+                    <Col className="gutter-row" span={4}>
+                        <h1>Precio</h1>
+                    </Col>
+                    <Col className="gutter-row" span={4}>
+                        <h1>Estado</h1>
+                    </Col>
+                </Row>
+                <Divider orientation="left"></Divider>
+            </>
+            <ListServ services={ services.service } />
         </>
     );
 };

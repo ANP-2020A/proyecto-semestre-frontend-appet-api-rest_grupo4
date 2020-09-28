@@ -4,6 +4,7 @@ import Routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import { useServicesList } from '../data/useServicesList';
 import ShowError from './ShowError';
+import {DollarOutlined }from '@ant-design/icons';
 
 const { Text } = Typography;
 
@@ -62,16 +63,16 @@ const ReviewServ = (props ) => {
                                     ? <>
                                         <Row gutter={24} justify={'center'}>
                                             <Col className="gutter-row" span={4}>
-                                                title={ service.title }
+                                                { service.title }
                                             </Col>
                                             <Col className="gutter-row" span={4}>
-                                                locate={ service.type }
+                                                { service.type }
                                             </Col>
                                             <Col className="gutter-row" span={4}>
-                                                description={ service.description}
+                                                { service.description}
                                             </Col>
                                             <Col className="gutter-row" span={4}>
-                                                price={ service.type }
+                                                <DollarOutlined /> { service.price }
                                             </Col>
                                             <Col className="gutter-row" span={4}>
                                                 <Switch defaultChecked onChange={onChange} />

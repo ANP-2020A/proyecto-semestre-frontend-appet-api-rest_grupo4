@@ -59,8 +59,8 @@ const ListServices = (props) => {
         <>
             <>
                 <Row gutter={8} justify={'center'}>
-                    <h1>Lista Servicios APPET</h1>
-                    <img src="/images/list_services.jpg" width={500} height={100}/>
+                    <h1>Lista Servicios  </h1>
+                    <img src="/images/list_services.jpg" width={475} height={100}/>
                     <br></br><br></br>
                 </Row>
             </>

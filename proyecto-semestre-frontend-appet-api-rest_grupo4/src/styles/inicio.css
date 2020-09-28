@@ -17,13 +17,13 @@ h1{
 h2{
     font-family: Brush Script MT;
     color: #ff4d4f !important;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: normal;
 }
 h3 {
     font-family: Brush Script MT;
     color: #312e2e !important;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: normal;
 }
 .ant-btn-primary {
@@ -80,3 +80,4 @@ h3 {
     border-bottom: none;
     border-radius: 2px 2px 0 0;
 }
+
